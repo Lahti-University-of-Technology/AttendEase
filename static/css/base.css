@@ -1,0 +1,17 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sora:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora';
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
