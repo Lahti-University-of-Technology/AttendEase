@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sora:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sora:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
   margin-top: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Sora' !important;
+  font-family: "Sora" !important;
 }
 
 /* a {
@@ -24,8 +24,4 @@ body {
 .site-footer {
   background-color: #333333;
 }
-
-
 /* site-footer end */
-
-
