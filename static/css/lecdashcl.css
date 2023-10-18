@@ -1,0 +1,23 @@
+.inputdate{
+    margin-left: 70px;
+    
+}
+.starttime{
+    margin-left: 28px;
+}
+
+.endtime{
+    margin-left: 36px;
+}
+
+.inputcourse{
+    margin-left: 50px;
+}
+
+.inputclassroom{
+    margin-left: 18px;
+}
+
+.imgbox{
+    display: flex;
+}
