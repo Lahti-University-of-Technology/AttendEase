@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/attendease/homepage.css' %}" />
+{% endblock %}
+{% block main %}
+<section class="banner bg-cover">
+    <div class="banner-wrap">
+        <div class="container">
+            <div class="banner-content">
+                <h1>A place you can trust for
+                    Marking your class
+                    attendance</h1>
+                <p>
+                    Stay upto date with the upcoming classes and update in regards to your attendances
+                </p>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

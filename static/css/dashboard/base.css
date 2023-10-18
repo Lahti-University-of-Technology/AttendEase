@@ -1,0 +1,30 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sora:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora' !important;
+}
+
+.wrapper {
+  min-width: 320px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  background-color: #fff !important;
+}
+
+.nav-item a{
+  color: #c2c7d0 !important;
+}
+
+.nav-item .active{
+  background-color: #45494d !important;
+}
