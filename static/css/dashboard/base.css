@@ -1,0 +1,89 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Sora:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sora' !important;
+}
+
+.wrapper {
+  min-width: 320px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  background-color: #fff !important;
+}
+
+.nav-item a{
+  color: #c2c7d0 !important;
+}
+
+.nav-item .active{
+  background-color: #45494d !important;
+}
+
+.toast-body {
+  padding: 4px 14px 4px 14px !important;
+}
+
+.tendet-select-field { 
+  border: 0.005rem solid rgba(0, 0, 0, .125);
+}
+
+#div_id_description label{
+  display: none;
+}
+
+#div_id_tender_document_needed label{
+  display: none;
+}
+
+.errorlist li{
+  list-style: none !important;
+  color:red !important;
+}
+
+
+/* user profile page */
+.tender-btn a{
+  background-color: #6e0606;
+  color: #fff !important;
+  border-color: transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  }
+  
+  .tender-btn a:hover {
+  background: #942222;
+  }
+
+
+@media (max-width:768px) {
+  .all-user-block .main-title{
+    flex-direction: column;
+  }
+
+  .all-user-block .main-title h3{
+    padding-bottom: 5px;
+  }
+}
+
+ @media (max-width:420px) {
+  .all-user-block .search-form div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .all-user-block .search-form .btn{
+   margin-top: 5px;
+   padding-block: 0px !important;
+  }
+} 
