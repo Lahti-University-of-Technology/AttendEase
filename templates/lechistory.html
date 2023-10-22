@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendease</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="{% static 'css/practice.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/lecdashcl.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/lechistory.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    
+    <section id="menu">
+      <div class="logo">
+        <img src="" alt="Logo">
+        <h2>Attendease</h2>
+      </div>
+      
+      <div class="items">
+        <li><i class="fa-solid fa-circle-info"></i><a href="#">Personal Details</a></li>
+        <li><i class="fa-solid fa-book"></i><a href="#">Create Leture</a></li>
+        <li><i class="fa-solid fa-clock-rotate-left"></i><a href="#">Lecture History</a></li>
+        <li><i class="fa-regular fa-calendar-days"></i><a href="#">Scheduled Lectures</a></li>
+        <li><i class="fa-solid fa-magnifying-glass"></i><a href="#">Student Attendance</a></li>
+      </div>
+
+    </section>
+
+    <section id="interface">
+      <div class="navigation">
+        <div class="n1">
+          <div>
+            <i id="menu-btn" class="fas fa-bars"></i>
+          </div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search">
+
+          </div>
+
+        </div>
+
+        <div class="profile">
+          <img src="" alt="Image">
+
+        </div>
+      </div>
+
+      <h3 class="i-name">Lecture History</h3>
+      <br>
+    
+      <br><br>
+
+      <label for="Date" class="labeldate">Search by Lecture Date</label>
+      <input type="date" name="" id="" class="inputdate">
+      <br><br>
+
+      <div class="board">
+        <table width="100%">
+          <thead>
+            <tr>
+              <td>Id</td>
+              <td>Date</td>
+              <td>Time</td>
+              <td>Course</td>
+              <td>Classroom</td>
+              <td>Status</td>
+              <td>Participation</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="student">
+                <h5>112</h5>
+              </td>
+              <td class="date">
+                <h5>16-Oct-2023</h5>
+              </td>
+              <td class="time">
+                <h5>12:30 - 14:30</h5>
+              </td>
+              <td class="course">
+                <h5>Digital Systems</h5>
+              </td>
+              <td class="classroom">
+                <h5>C250</h5>
+              </td>
+              <td class="status">
+                <h5>Held</h5>
+              </td>
+              <td class="Participation">
+                <h5>45</h5>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+    <script>
+      $('#menu-btn').click(function(){
+        $('#menu').toggleClass('active');
+      })
+    </script>
+    
+  </body>
+</html>

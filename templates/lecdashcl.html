@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendease</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="{% static 'css/practice.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/lecdashcl.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    
+    <section id="menu">
+      <div class="logo">
+        <img src="" alt="Logo">
+        <h2>Attendease</h2>
+      </div>
+      
+      <div class="items">
+        <li><i class="fa-solid fa-circle-info"></i><a href="#">Personal Details</a></li>
+        <li><i class="fa-solid fa-book"></i><a href="#">Create Leture</a></li>
+        <li><i class="fa-solid fa-clock-rotate-left"></i><a href="#">Lecture History</a></li>
+        <li><i class="fa-regular fa-calendar-days"></i><a href="#">Scheduled Lectures</a></li>
+        <li><i class="fa-solid fa-magnifying-glass"></i><a href="#">Student Attendance</a></li>
+      </div>
+
+    </section>
+
+    <section id="interface">
+      <div class="navigation">
+        <div class="n1">
+          <div>
+            <i id="menu-btn" class="fas fa-bars"></i>
+          </div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search">
+
+          </div>
+
+        </div>
+
+        <div class="profile">
+          <img src="" alt="Image">
+
+        </div>
+      </div>
+
+      <h3 class="i-name">Create Lecture</h3>
+      <br>
+    
+    
+      <div class="board">
+
+        <label for="Date">Select Date</label>
+        <input type="date" id="inputdate" class="inputdate"><br><br>
+        <label for="sTime">Select Start Time</label>
+        <input type="time" id="starttime" class="starttime"><br><br>
+        <label for="sTime">Select End Time</label>
+        <input type="time" id="endtime" class="endtime"><br><br>
+        <label for="Course">Select Course</label>
+        <select name="course" id="inputcourse" class="inputcourse">
+        <option value="S1">Software Modeling</option>
+        <option value="S2">Full Stack </option>
+        <option value="S3">Service Design</option>
+        <option value="S4">Research Design</option>
+        </select><br><br>
+        <label for="ClassRoom">Select ClassRoom</label>
+        <select name="classroom" id="inputclassroom" class="inputclassroom">
+        <option value="S1">C250</option>
+        <option value="S2">C251</option>
+        <option value="S3">C252</option>
+        </select>
+        <br><br>
+        <button onclick="createLecture()">Create Lecture</button>
+        <br><br>
+        <div id="imgbox" class="imgbox">
+          <img src="" id="qrimage" alt="">
+        </div> 
+             
+        <br><br>
+      
+        <table width="100%">
+          <thead>
+            <tr>
+              <td>Id</td>
+              <td>Date</td>
+              <td>Time</td>
+              <td>Course</td>
+              <td>Classroom</td>
+              <td>QR</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="student">
+                <h5>112</h5>
+              </td>
+              <td class="date">
+                <h5>18-Oct-2023</h5>
+              </td>
+              <td class="time">
+                <h5>12:30 - 14:30</h5>
+              </td>
+              <td class="course">
+                <h5>Digital Systems</h5>
+              </td>
+              <td class="classroom">
+                <h5>C250</h5>
+              </td>
+              <td class="qr">
+                <a href="#">Show QR</a>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+    <script>
+      $('#menu-btn').click(function(){
+        $('#menu').toggleClass('active');
+      })
+
+      let imgbox=document.getElementById("imgbox")
+      let qrimage=document.getElementById("qrimage")
+      let qrdate=document.getElementById("inputdate")
+      let qrtimes=document.getElementById("starttime")
+      let qrtimee=document.getElementById("endtime")
+      let qrcourse=document.getElementById("inputcourse")
+      let qrclass=document.getElementById("inputclassroom")
+      let link = "http://127.0.0.1/"
+    
+
+      function createLecture(){
+        qrimage.src=" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + link + qrdate.value +
+        qrtimes.value + qrtimee.value + qrcourse.value + qrclass.value;
+
+      }
+    </script>
+    
+  </body>
+</html>
