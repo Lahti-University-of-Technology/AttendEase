@@ -49,11 +49,13 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'bootstrap4',
+    'crispy_forms',
 ]
 
 LOCAL_APPS = [
     'apps.users',
-    'apps.attendease'
+    'apps.attendease',
+    'apps.lecturer'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

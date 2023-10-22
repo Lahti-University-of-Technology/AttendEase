@@ -1,0 +1,54 @@
+{% extends "dashboard/base.html" %} 
+{% load static %}
+{% load crispy_forms_tags %}
+{% block main %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container m-0 p-5">   
+        <div class="new-lecture-content">
+            <div class="title">
+                <h6>Create Lecture</h6>
+            </div>
+            <div class="new-lecture-form">
+                {% csrf_token %}
+                <form method="POST">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="email">Lecture title:</label>
+                            {{form.title}}
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Start date:</label>
+                            {{form.start_date}}
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Start time:</label>
+                            {{form.start_time}}
+                        </div>
+                        <div class="form-group">
+                            <label for="email">End date:</label>
+                            {{form.end_date}}
+                        </div>
+                        <div class="form-group">
+                            <label for="email">End time:</label>
+                            {{form.end_time}}
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Course:</label>
+                            {{form.course}}
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Classroom:</label>
+                            {{form.classroom}}
+                        </div>
+                    </div>
+                    <!-- {{form.title}}
+                    {{form.title}} -->
+                    <input type="submit" class="btn btn-primary float-right" value="Save">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}
