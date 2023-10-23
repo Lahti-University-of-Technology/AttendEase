@@ -46,7 +46,7 @@ EMAIL_PORT = ''
 # from .base import *
 
 # # SECURITY WARNING: don't run with debug turned on in production!
-# SECRET_KEY = 'django-insecure-e(r*1+g(-39+nc39f&%h9@jd%42zv$q&%dkr+s)$^m!*vwyg_8'
+SECRET_KEY = 'django-insecure-e(r*1+g(-39+nc39f&%h9@jd%42zv$q&%dkr+s)$^m!*vwyg_8'
 
 # DEBUG = True
 
@@ -54,11 +54,3 @@ EMAIL_PORT = ''
 
 # # Application definition
 # INSTALLED_APPS += []
-
-# # Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
