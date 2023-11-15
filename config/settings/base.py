@@ -47,9 +47,17 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    'bootstrap4',
+    'crispy_forms',
+]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    'apps.users',
+    'apps.attendease',
+    'apps.lecturer',
+    'apps.student'
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -134,9 +142,21 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [STATIC_DIR]
-
+MEDIA_URL = 'media/'
+MEDIA_ROOT= os.path.join(PROJECT_DIR, 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = "users.User"
+
+import socket
+hostname = socket.gethostname()
+BACKEND_HOST = socket.gethostbyname(hostname)
+BASE_URL = "http://" + BACKEND_HOST + ":8000"
+
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'index'
