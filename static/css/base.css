@@ -8,10 +8,22 @@
 }
 
 body {
-  font-family: 'Sora';
+  font-family: 'Sora' !important;
 }
 
-a {
+/* a {
   color: black;
   text-decoration: none;
+} */
+
+/* site-header start */
+.site-header {
+  margin-top: 15px;
 }
+/* site header end */
+
+/* site-footer start */
+.site-footer {
+  background-color: #333333;
+}
+/* site-footer end */
