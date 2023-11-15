@@ -1,0 +1,10 @@
+.attendance-detail-wrap {
+    box-shadow: 1px 10px 15px 10px rgba(139, 131, 131, 0.1);
+    padding-right: 49px;
+    padding-left: 49px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    margin-top: 125px;
+    margin-bottom: 170px;
+    background-color: antiquewhite;
+}

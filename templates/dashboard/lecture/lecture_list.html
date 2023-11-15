@@ -1,0 +1,54 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/lecture/lecture_list.css' %}" />
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block main %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container">
+        <div calss="lecture-list">
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>Lecture Title</th>
+                        <th>Start date & time</th>
+                        <th>End date & time</th>
+                        <th>Course</th>
+                        <th>Classroom</th>
+                        <th>QR Code</th>
+                        <th>Show marked attendance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for lecture in object_list %}
+                    <tr>
+                        <td>{{lecture.title}}</td>
+                        <td>{{lecture.start_date|date:'Y-m-d'}}<span> | {{lecture.start_time}}</span></td>
+                        <td>{{lecture.end_date|date:'Y-m-d'}}<span> | {{lecture.end_time}}</span></td>
+                        <td><span>{{lecture.course}}</span></td>
+                        <td>{{lecture.classroom}}</td>
+                        <td><a href="{{lecture.qr.url}}" target="_blank">show</a>
+                        <td><a href="{% url 'attendance-inffo' pk=lecture.id %}" target="_blank">click to show</a>
+                        <td>
+                            <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                    id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Edit</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}

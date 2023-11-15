@@ -1,0 +1,35 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/lecture/lecture_list.css' %}" />
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block main %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container">
+        <div calss="lecture-list">
+            <table class="table table-hover table-responsive">
+                <!-- {{object_list}} -->
+                <h3>Attendance details for </h3>
+                {{attendance}}
+                <thead>
+                    <tr>
+                        <th>Student name</th>
+                        <th>Marked at</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for marked_attendance in attendance %}
+                    <tr>
+                        <td>{{marked_attendance.student}}</td>
+                        <td>{{marked_attendance.marked_at}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}

@@ -1,0 +1,14 @@
+.new-lecture-form {
+    padding: 5rem;
+    /* background-color: rgb(247 247 247); */
+    box-shadow: 10px 10px 15px 10px rgba(0,0,0,0.1)
+}
+
+.lecture-btn {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+input, select {
+    width: 100% !important;
+}

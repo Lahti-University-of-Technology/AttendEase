@@ -1,0 +1,28 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/lecture/create_lecture.css' %}" />
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block main %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <div class="container m-0 p-3">
+        <div class="new-lecture-content">
+            <div class="title py-4">
+                <h3>Create new lecture</h3>
+            </div>
+            <div class="new-lecture-form">
+                
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Create">
+                    <!-- <a href="{% url 'create-lecture' %}" class="lecture-btn text-white px-4 py-2">Create</a> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.content-wrapper -->
+{% endblock %}

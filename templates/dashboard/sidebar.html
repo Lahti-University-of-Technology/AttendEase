@@ -1,0 +1,73 @@
+{% load static %}
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+        <img src="{% static 'images/brand-logo.png' %}" alt="image" height="50" width="225">
+        <!-- <small>Attendease</small> -->
+    </a>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar Menu -->
+        <nav class=""  style="margin-top:25px;">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                <!-- <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fa fa-binoculars nav-icon"></i>
+                        <p>Overview</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa fa-binoculars nav-icon"></i>
+                        <p>Personal Details</p>
+                    </a>
+                </li> -->
+                {% if request.user.is_teacher == True %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-user"></i>
+                        <p>Lecture<i class="fa fa-angle-left right"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{% url 'lecture-list' %}" class="nav-link">
+                                <i class="fa fa-caret-right nav-icon"></i>
+                                <p>All Lectures</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'create-lecture' %}" class="nav-link">
+                                <i class="fa fa-caret-right nav-icon"></i>
+                                <p>New Lecture</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fa fa-binoculars nav-icon"></i>
+                        <p>Overview</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'lecture-info' %}" class="nav-link">
+                        <i class="fa fa-binoculars nav-icon"></i>
+                        <p>Lecture Info</p>
+                    </a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a href="{% url 'attendance-detail' %}" class="nav-link active">
+                        <i class="fa fa-binoculars nav-icon"></i>
+                        <p>Attendance details</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
